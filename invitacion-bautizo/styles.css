@@ -1,0 +1,1591 @@
+/* Paleta dorado y negro elegante */
+:root {
+    --gold: #C9B037;
+    --gold-dark: #B8860B;
+    --eucalyptus: #578e7e;
+    --rose: #E8B4B8;
+    --white: #fff;
+    --gray-light: #F5F5F5;
+    --gray-dark: #2E2E2E;
+    --primary-font: 'Poppins', sans-serif;
+    --cursive-font: 'Great Vibes', cursive;
+}
+
+
+body {
+    background: linear-gradient(120deg, #e3f0ff 0%, #b4dfff 100%);
+    color: #37506c;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+
+.invitation-container.minimal-bautizo {
+    max-width: 520px;
+    margin: 0 auto 48px auto;
+    background: #fafdff;
+    border-radius: 44px;
+    box-shadow: 0 8px 40px rgba(70,170,255,0.13);
+    padding: 3.2rem 2.2rem 2.7rem 2.2rem;
+    border: 3px solid #7ec6f5;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    min-height: 680px;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 1.1s cubic-bezier(0.23,1,0.32,1), transform 1.1s cubic-bezier(0.23,1,0.32,1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.invitation-container.minimal-bautizo.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.frase-encuadre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.96);
+    border: 2.5px solid #7ec6f5;
+    border-radius: 20px;
+    box-shadow: 0 2px 16px #b4dfff22;
+    padding: 1.1em 1.6em;
+    margin: 2.2rem auto 1.7rem auto;
+    max-width: 92%;
+    min-height: 80px;
+    gap: 1.1em;
+    position: relative;
+    z-index: 2;
+}
+.frase-encuadre.frase-encuadre-col {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6em;
+    background: linear-gradient(135deg, #e3f0ff 0%, #b4dfff 60%, #7ec6f5 100%);
+    border: 2.5px solid #b4dfff;
+    box-shadow: 0 6px 28px #b4dfff33, 0 1.5px 12px #7ec6f522;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    opacity: 0.98;
+}
+.frase-encuadre.frase-encuadre-col .img-frase-lado {
+    display: block;
+    margin: 1em auto 0 auto;
+    width: 220px;
+    height: 220px;
+    max-width: 90vw;
+}
+@media (max-width: 600px) {
+    .frase-encuadre.frase-encuadre-col .img-frase-lado {
+        width: 170px;
+        height: 170px;
+        margin: 0.7em auto 0 auto;
+    }
+}
+
+.frase-encuadre .frase-texto {
+    font-family: 'Great Vibes', cursive, 'Poppins', sans-serif;
+    font-size: 2.25rem;
+    color: #3498db;
+    text-align: center;
+    flex: 1;
+    line-height: 1.4;
+}
+.img-frase-lado {
+    width: 54px;
+    height: 54px;
+    object-fit: contain;
+    opacity: 0.8;
+    filter: drop-shadow(0 2px 12px #b4dfff33);
+    border-radius: 16px;
+    background: #fafdff;
+    margin: 0 0.3em;
+    transition: width 0.3s, height 0.3s;
+}
+.img-frase-derecha {
+    order: 2;
+    margin-left: 1.2em;
+    width: 170px;
+    height: 170px;
+}
+@media (max-width: 600px) {
+    .img-frase-derecha {
+        width: 90px;
+        height: 90px;
+    }
+}
+.img-frase-izquierda {
+    order: 0;
+    margin-right: 1.2em;
+}
+@media (max-width: 600px) {
+    .frase-encuadre {
+        flex-direction: column;
+        padding: 1em 0.7em;
+        gap: 0.5em;
+    }
+    .img-frase-lado {
+        width: 38px;
+        height: 38px;
+        margin: 0.2em 0;
+    }
+    .img-frase-derecha, .img-frase-izquierda {
+        margin: 0;
+    }
+}
+
+.separador-elegante {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, #e3f0ff 0%, #7ec6f5 45%, #e3f0ff 100%);
+    margin: 2.3rem auto 2.3rem auto;
+    width: 65%;
+    border-radius: 2px;
+    opacity: 0.7;
+}
+.bendicion-especial {
+    background: linear-gradient(120deg, #e3f0ff 0%, #b4dfff 100%);
+    border: 2px solid #7ec6f5;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px #7ec6f522;
+    padding: 1.6em 1.2em 1.3em 1.2em;
+    margin: 2.2rem auto 2.7rem auto;
+    text-align: center;
+    position: relative;
+    max-width: 90%;
+}
+.bendicion-especial .cruz-fondo {
+    position: absolute;
+    left: 50%;
+    top: 12px;
+    transform: translateX(-50%);
+    width: 54px;
+    height: 54px;
+    opacity: 0.19;
+    filter: blur(0.7px);
+    pointer-events: none;
+    z-index: 1;
+}
+.bendicion-especial .bendicion-texto {
+    font-family: 'Great Vibes', cursive, 'Poppins', sans-serif;
+    color: #3498db;
+    font-size: 1.25rem;
+    margin-top: 2.7em;
+    position: relative;
+    z-index: 2;
+}
+.angel-fondo {
+    position: absolute;
+    right: 8px;
+    bottom: 12px;
+    width: 80px;
+    opacity: 0.13;
+    filter: blur(0.7px);
+    pointer-events: none;
+    z-index: 0;
+}
+.bautizo-message, .section, .agradecimiento, .decor-stars {
+    text-align: center;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section .label, .section .names, .section .details, .section .place, .map-btn, .confirm-btn {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Hero image portada */
+.hero-image-container {
+    width: 100vw;
+    max-width: 100%;
+    height: 60vh;
+    min-height: 340px;
+    max-height: 480px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0;
+    background: #b4dfff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-image {
+    width: 100vw;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.92) contrast(1.07) saturate(1.08);
+    transition: filter 0.3s;
+}
+.hero-image-container:hover .hero-image {
+    filter: brightness(1) contrast(1.1) saturate(1.13);
+}
+.hero-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 2;
+}
+.invitation-header-sobre-imagen {
+    background: rgba(255,255,255,0.74);
+    border-radius: 22px;
+    padding: 1.4rem 2.2rem 1.1rem 2.2rem;
+    box-shadow: 0 4px 24px #b4dfff33, 0 1px 8px #7ec6f533;
+    text-align: center;
+    max-width: 96vw;
+    margin: 0 auto;
+}
+.invitation-header-sobre-imagen .baby-name {
+    margin-bottom: 0.3em;
+    color: #37506c;
+    font-size: 2.3rem;
+    font-family: 'Great Vibes', cursive;
+    letter-spacing: 1px;
+}
+.invitation-header-sobre-imagen .bautizo-date {
+    color: #3498db;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+@media (max-width: 600px) {
+    .invitation-header-sobre-imagen {
+        padding: 0.7rem 0.6rem 0.5rem 0.6rem;
+    }
+    .invitation-header-sobre-imagen .baby-name {
+        font-size: 1.4rem;
+    }
+    .invitation-header-sobre-imagen .bautizo-date {
+        font-size: 1rem;
+    }
+}
+
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #b4dfff88 0%, #fff0 60%, #e3f0ffcc 100%);
+    z-index: 2;
+    text-align: center;
+}
+.hero-overlay h1.baby-name {
+    color: #fff;
+    text-shadow: 0 4px 24px #3791c7cc, 0 2px 8px #b4dfff99;
+    font-size: 3.3rem;
+    margin-bottom: 0.7rem;
+    letter-spacing: 2px;
+}
+.hero-overlay .bautizo-date {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-shadow: 0 2px 8px #7ec6f5cc;
+    background: rgba(70,170,255,0.10);
+    border-radius: 20px;
+    padding: 0.4em 1em;
+    display: inline-block;
+}
+
+/* Detalle decorativo superior */
+.invitation-container.minimal-bautizo:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 48px;
+    border-top-left-radius: 44px;
+    border-top-right-radius: 44px;
+    background: linear-gradient(90deg, #7ec6f5 0%, #b4dfff 100%);
+    opacity: 0.22;
+    z-index: 0;
+}
+
+.contacto-personal {
+    margin: 1.2rem auto 0.5rem auto;
+    text-align: center;
+    color: #37506c;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background: #e3f0ffb8;
+    border-radius: 14px;
+    padding: 0.7em 1.3em;
+    box-shadow: 0 2px 8px #b4dfff22;
+    display: inline-block;
+}
+.contacto-personal i {
+    margin-right: 0.5em;
+    color: #3498db;
+}
+.frase-contacto {
+    text-align: center;
+    color: #5c7fa9;
+    font-size: 1.05rem;
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    margin: 0.8em auto 0.2em auto;
+    letter-spacing: 0.3px;
+    font-weight: 400;
+}
+.mensaje-importancia-asistencia {
+    text-align: center;
+    color: #3b6fa3;
+    font-size: 1.13rem;
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 1.4em auto 1.2em auto;
+    max-width: 500px;
+    line-height: 1.5;
+    letter-spacing: 0.1px;
+    font-weight: 500;
+}
+@media (max-width: 600px) {
+    .mensaje-importancia-asistencia {
+        font-size: 1.01rem;
+        margin: 1em auto 1em auto;
+        max-width: 97vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .frase-contacto {
+        font-size: 0.95rem;
+    }
+}
+
+.footer-invita-bonito {
+    width: 100%;
+    text-align: center;
+    padding: 1.2em 0 1.4em 0;
+    border-top: 1.5px solid #e3f0ff;
+    background: #fcfdff;
+    margin-top: 2em;
+}
+.btn-invita-bonito {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.3em auto 0.3em auto;
+    padding: 0.45em 1.1em 0.45em 1em;
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: #3498db;
+    background: #fff;
+    border: 1.5px solid #3498db;
+    border-radius: 2em;
+    box-shadow: 0 1px 6px #b4dfff22;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.22s, color 0.22s, box-shadow 0.2s, border 0.22s;
+    gap: 0.6em;
+    letter-spacing: 0.3px;
+}
+.btn-invita-bonito i {
+    font-size: 1.1em;
+    color: #3498db;
+    margin-right: 0.23em;
+}
+.btn-invita-bonito:hover, .btn-invita-bonito:focus {
+    background: #e3f0ff;
+    color: #2176b6;
+    border-color: #2176b6;
+    box-shadow: 0 2px 14px #a0e9ff33;
+    outline: none;
+}
+.footer-brand {
+    color: #7fa0c3;
+    font-size: 0.91rem;
+    margin-top: 0.5em;
+    letter-spacing: 0.2px;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+@media (max-width: 600px) {
+    .footer-invita-bonito {
+        padding: 0.7em 0 1.1em 0;
+    }
+    .btn-invita-bonito {
+        font-size: 0.92rem;
+        padding: 0.37em 0.7em 0.37em 0.7em;
+    }
+    .footer-brand {
+        font-size: 0.82rem;
+    }
+}
+
+.btn-invita-bonito i {
+    font-size: 1.3em;
+    color: #fff;
+    margin-right: 0.25em;
+}
+.btn-invita-bonito:hover, .btn-invita-bonito:focus {
+    background: linear-gradient(90deg, #3498db 0%, #3bb5c7 100%);
+    box-shadow: 0 4px 18px #3bb5c766;
+    filter: brightness(1.08);
+    outline: none;
+}
+@media (max-width: 600px) {
+    .btn-invita-bonito {
+        font-size: 1rem;
+        padding: 0.6em 1.1em 0.6em 1em;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .contacto-personal {
+        font-size: 0.97rem;
+        padding: 0.6em 0.7em;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes bounceIn {
+  0% { transform: scale(0.7); opacity: 0; }
+  60% { transform: scale(1.12); opacity: 1; }
+  80% { transform: scale(0.93); }
+  100% { transform: scale(1); }
+}
+@keyframes slideIn {
+  0% { opacity: 0; transform: translateX(-60px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+.animate-fadein { animation: fadeIn 1.1s cubic-bezier(0.23, 1, 0.32, 1) both; }
+.animate-bounce { animation: bounceIn 1.3s cubic-bezier(0.23, 1, 0.32, 1) both; }
+.animate-slidein { animation: slideIn 1.1s cubic-bezier(0.23, 1, 0.32, 1) both; }
+.animate-section { animation: fadeIn 1.2s cubic-bezier(0.23, 1, 0.32, 1) both; }
+
+/* Decoración de estrellitas animadas */
+.decor-stars {
+    position: absolute;
+    bottom: 18px; right: 22px;
+    z-index: 2;
+    pointer-events: none;
+}
+.star {
+    display: inline-block;
+    width: 22px; height: 22px;
+    background: radial-gradient(circle, #b4dfff 70%, #fff 100%);
+    border-radius: 50%;
+    opacity: 0.7;
+    position: absolute;
+    animation: twinkle 2.4s infinite alternate;
+}
+.star1 { left: 0; bottom: 0; animation-delay: 0s; }
+.star2 { left: 18px; bottom: 12px; width: 16px; height: 16px; animation-delay: 0.6s; }
+.star3 { left: 38px; bottom: 2px; width: 13px; height: 13px; animation-delay: 1.2s; }
+@keyframes twinkle {
+  0% { opacity: 0.4; transform: scale(0.8) rotate(0deg); }
+  100% { opacity: 1; transform: scale(1.1) rotate(20deg); }
+}
+
+
+
+.main-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2.2rem;
+    margin-bottom: 1.5rem;
+    z-index: 1;
+    position: relative;
+}
+.icon-cross img.cruz-img {
+    width: 62px;
+    height: 62px;
+    object-fit: cover;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(126,198,245,0.13);
+    border: 3px solid #7ec6f5;
+    padding: 6px;
+    margin-bottom: 0.2rem;
+}
+.icon-angel img.angel-side {
+    position: absolute;
+    top: 58%;
+    transform: translateY(-50%);
+    z-index: 2;
+    pointer-events: none;
+}
+.angel-left {
+    left: -70px;
+}
+.angel-right {
+    right: -70px;
+}
+.angel-img-big {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    opacity: 0.23;
+    filter: drop-shadow(0 4px 24px #b4dfff77) blur(0.3px);
+    transition: opacity 0.4s, filter 0.4s;
+}
+@media (max-width: 900px) {
+    .angel-img-big {
+        width: 110px;
+        height: 110px;
+    }
+    .angel-left { left: -40px; }
+    .angel-right { right: -40px; }
+}
+@media (max-width: 600px) {
+    .angel-img-big {
+        width: 70px;
+        height: 70px;
+    }
+    .angel-left { left: -20px; }
+    .angel-right { right: -20px; }
+}
+.angel-img {
+    width: 62px;
+    height: 62px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2.5px solid #7ec6f5;
+    background: #fff;
+    box-shadow: 0 2px 16px #b4dfff33;
+}
+.icon-angel img {
+    width: 62px;
+    height: 62px;
+    object-fit: cover;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(126,198,245,0.13);
+    border: 3px solid #b4dfff;
+    padding: 6px;
+    margin-bottom: 0.2rem;
+}
+.icon-cross i, .icon-angel i { display: none; }
+.baby-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.2rem;
+    color: #3ba3e6;
+    margin-bottom: 1.1rem;
+    display: block;
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 14px #b4dfff44;
+}
+.bautizo-date {
+    font-size: 1.32rem;
+    color: #5a9bd6;
+    margin-bottom: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+}
+.bautizo-message {
+    font-size: 2.1rem;
+    font-family: 'Great Vibes', cursive, 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #e3f0ff 0%, #b4dfff 100%);
+    border-radius: 38px;
+    border: 2.5px dashed #7ec6f5;
+    padding: 2.1em 2.2em 1.7em 2.2em;
+    margin: 3.2rem auto 3.7rem auto;
+    box-shadow: 0 8px 32px #7ec6f533;
+    color: #3498db;
+    text-align: center;
+    position: relative;
+    max-width: 98%;
+    letter-spacing: 1.7px;
+    z-index: 1;
+    line-height: 1.3;
+    overflow: hidden;
+}
+.bautizo-message .frase-bg-overlay {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    width: 100%; height: 100%;
+    background: rgba(255,255,255,0.72);
+    z-index: 1;
+    pointer-events: none;
+    border-radius: 38px;
+}
+
+.bautizo-message::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 85%;
+    height: 90%;
+    background: url('imagenes-bautizo/niño/3.jpg') center center/cover no-repeat;
+    opacity: 0.17;
+    filter: blur(2.5px) grayscale(0.25) brightness(1.08);
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.bautizo-message span, .bautizo-message strong, .bautizo-message em {
+    position: relative;
+    z-index: 3;
+    background: rgba(255,255,255,0.86);
+    padding: 0.25em 0.4em;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px #b4dfff22;
+    display: inline-block;
+}
+.bautizo-message .frase-texto {
+    position: relative;
+    z-index: 3;
+    background: rgba(255,255,255,0.86);
+    padding: 0.25em 0.4em;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px #b4dfff22;
+    display: inline-block;
+}
+.bautizo-message:before {
+    content: '\2728';
+    position: absolute;
+    left: 24px;
+    top: 12px;
+    font-size: 3.3rem;
+    color: #7ec6f5;
+    opacity: 0.45;
+    filter: blur(1.5px) brightness(1.3);
+    pointer-events: none;
+    z-index: 1;
+}
+.bautizo-message:after {
+    /* El icono angelito ahora va en ::before, la imagen en ::after */
+    content: '';
+}
+
+.bautizo-message:before {
+    content: '\2728';
+    position: absolute;
+    left: 24px;
+    top: 12px;
+    font-size: 3.3rem;
+    color: #7ec6f5;
+    opacity: 0.45;
+    filter: blur(1.5px) brightness(1.3);
+    pointer-events: none;
+    z-index: 0;
+}
+.bautizo-message:after {
+    content: '\1F47C';
+    position: absolute;
+    right: 24px;
+    bottom: 10px;
+    font-size: 3.5rem;
+    color: #b4dfff;
+    opacity: 0.36;
+    filter: blur(1.5px) brightness(1.35);
+    pointer-events: none;
+    z-index: 0;
+}
+.bautizo-message span, .bautizo-message strong {
+    position: relative;
+    z-index: 2;
+}
+.bautizo-message:before {
+    content: '\2728'; /* Sparkles Unicode */
+    position: absolute;
+    left: 18px;
+    top: 14px;
+    font-size: 1.5rem;
+    color: #7ec6f5;
+    opacity: 0.85;
+}
+.bautizo-message:after {
+    content: '\1F47C'; /* Angel Unicode */
+    position: absolute;
+    right: 18px;
+    bottom: 12px;
+    font-size: 1.6rem;
+    color: #b4dfff;
+    opacity: 0.95;
+}
+.section {
+    margin-bottom: 2.7rem;
+    background: #f1f8ff;
+    border-radius: 22px;
+    padding: 2.1em 1.2em 1.7em 1.2em;
+    box-shadow: 0 3px 14px #7ec6f511;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 97%;
+    font-size: 1.22rem;
+}
+.section-familia {
+    background: linear-gradient(120deg, #e3f0ff 0%, #b4dfff 100%);
+    border-radius: 28px;
+    box-shadow: 0 4px 18px #7ec6f522;
+    padding: 1.6em 1.2em 1.2em 1.2em;
+    margin: 1.8rem auto 2.3rem auto;
+    text-align: center;
+    position: relative;
+    max-width: 92%;
+    border: 2.2px solid #7ec6f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7em;
+}
+.familia-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 12px #b4dfff55, 0 1.5px 8px #7ec6f522;
+    margin-bottom: 0.3em;
+    font-size: 2.5rem;
+    color: #3498db;
+    border: 2.5px solid #b4dfff;
+}
+.padrinos-icon {
+    color: #7ec6f5;
+    background: #fafdff;
+    border: 2.5px solid #7ec6f5;
+}
+.padrinos-block {
+    margin-top: 0.2em;
+    margin-bottom: 2.7em;
+    position: relative;
+    overflow: hidden;
+}
+.decor-familia {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    opacity: 0.12;
+    filter: blur(1.2px) brightness(1.06);
+    width: 170px;
+    height: 170px;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.decor-familia img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.padrinos-block > *:not(.decor-familia) {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 600px) {
+    .section-familia {
+        padding: 1.1em 0.4em 1em 0.4em;
+        gap: 0.4em;
+    }
+    .familia-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.6rem;
+    }
+    .familia-circular-section {
+        width: 98vw;
+        min-width: 0;
+        min-height: 0;
+        border-radius: 50vw;
+        flex-direction: column;
+        padding: 1.3em 0.2em;
+    }
+}
+.familia-rediseño-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5em;
+    background: none;
+    margin: 2.3rem auto 2.8rem auto;
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+    z-index: 2;
+}
+.familia-card {
+    background: linear-gradient(135deg, #e3f0ff 0%, #b4dfff 60%, #7ec6f5 100%);
+    border-radius: 50%;
+    border: 3px solid #7ec6f5;
+    box-shadow: 0 8px 36px #b4dfff33, 0 2px 16px #7ec6f522;
+    width: 230px;
+    height: 230px;
+    min-width: 180px;
+    min-height: 180px;
+    max-width: 98vw;
+    max-height: 98vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2em 1em;
+    position: relative;
+    transition: box-shadow 0.3s;
+}
+.papas-card {
+    border-color: #7ec6f5;
+}
+.padrinos-card {
+    border-color: #b4dfff;
+}
+.familia-card-icon {
+    background: #fff;
+    border-radius: 50%;
+    width: 68px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #3498db;
+    box-shadow: 0 2px 12px #b4dfff55, 0 1.5px 8px #7ec6f522;
+    margin-bottom: 0.5em;
+    border: 2.5px solid #b4dfff;
+}
+.padrinos-card .familia-card-icon {
+    color: #7ec6f5;
+    border: 2.5px solid #7ec6f5;
+}
+.familia-card-label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.18rem;
+    color: #3791c7;
+    margin-bottom: 0.3em;
+}
+.familia-card-names {
+    font-family: 'Great Vibes', cursive, 'Poppins', sans-serif;
+    font-size: 1.45rem;
+    color: #3f3f4e;
+    text-align: center;
+    margin-top: 0.2em;
+    line-height: 1.3;
+}
+.familia-separador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-width: 50px;
+}
+.familia-separador-icon {
+    font-size: 2.2rem;
+    color: #7ec6f5;
+    opacity: 0.7;
+    margin: 0 0.5em;
+}
+@media (max-width: 800px) {
+    .familia-rediseño-section {
+        flex-direction: column;
+        gap: 1.7em;
+    }
+    .familia-separador {
+        min-width: 0;
+        height: 48px;
+    }
+}
+@media (max-width: 600px) {
+    .familia-card {
+        width: 160px;
+        height: 160px;
+        min-width: 110px;
+        min-height: 110px;
+        padding: 0.7em 0.3em;
+    }
+    .familia-card-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.3rem;
+    }
+    .bautizo-message-redisenada {
+        width: 170px;
+        height: 170px;
+        min-width: 110px;
+        min-height: 110px;
+        padding: 0.7em 0.3em;
+        font-size: 0.98rem;
+    }
+}
+.bautizo-message-redisenada {
+    background: linear-gradient(135deg, #e3f0ff 0%, #b4dfff 60%, #7ec6f5 100%);
+    border-radius: 24px;
+    border: 2.5px solid #b4dfff;
+    box-shadow: 0 8px 36px #b4dfff22, 0 2px 16px #7ec6f522;
+    width: 100%;
+    max-width: 470px;
+    min-width: 180px;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.4em 1.2em 1.2em 1.2em;
+    margin: 1.7rem auto 2.2rem auto;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    transition: box-shadow 0.3s;
+}
+.bendicion-especial.bendicion-mejorada {
+    text-align: center;
+    margin: 2.1em auto 1.5em auto;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(120deg, #e3f0ff 0%, #b4dfff 100%);
+    border-radius: 28px;
+    box-shadow: 0 4px 18px #7ec6f522;
+    padding: 2.1em 1.2em 1.5em 1.2em;
+    max-width: 500px;
+    width: 98vw;
+    border: 2.2px solid #7ec6f5;
+    overflow: hidden;
+    width: 100%;
+    max-width: 470px;
+    min-width: 180px;
+    min-height: 80px;
+    padding: 1.2em 1.2em 1.1em 1.2em;
+}
+.bautizo-message-recta .bautizo-message-img {
+    display: block;
+    margin: 0 auto 0.6em auto;
+    height: 400px;
+    max-width: 400px;
+    object-fit: contain;
+}
+@media (max-width: 600px) {
+    .bautizo-message-recta .bautizo-message-img {
+        height: 38px;
+        max-width: 60px;
+        margin-bottom: 0.4em;
+    }
+}
+
+.bautizo-message-recta .bautizo-message-texto {
+    font-family: 'Great Vibes', cursive, 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    color: #3f3f4e;
+    text-align: center;
+    margin-top: 0.2em;
+    line-height: 1.3;
+    padding: 0 0.2em;
+}
+@media (max-width: 600px) {
+    .bautizo-message-recta .bautizo-message-texto {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .bautizo-message-redisenada, .bautizo-message-recta {
+        max-width: 96vw;
+        padding: 1em 0.4em 0.8em 0.4em;
+        font-size: 0.99rem;
+    }
+    .bautizo-message-recta .bautizo-message-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 1.1rem;
+    }
+}
+
+.bautizo-message-icon {
+    background: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    color: #7ec6f5;
+    box-shadow: 0 2px 12px #b4dfff55, 0 1.5px 8px #7ec6f522;
+    margin-bottom: 0.5em;
+    border: 2.5px solid #b4dfff;
+}
+.bautizo-message-texto {
+    font-family: 'Great Vibes', cursive, 'Poppins', sans-serif;
+    font-size: 1.18rem;
+    color: #3f3f4e;
+    text-align: center;
+    margin-top: 0.2em;
+    line-height: 1.3;
+    padding: 0 0.2em;
+}
+
+
+
+
+.seccion-icon {
+    display: inline-block;
+    font-size: 2.1rem;
+    color: #7ec6f5;
+    margin-right: 0.42em;
+    vertical-align: middle;
+    line-height: 1;
+}
+@media (max-width: 600px) {
+    .seccion-icon {
+        font-size: 1.35rem;
+        margin-right: 0.28em;
+    }
+}
+.section .label {
+    font-weight: 600;
+    color: #3791c7;
+    font-size: 1.26rem;
+    margin-bottom: 0.19em;
+    letter-spacing: 0.02em;
+}
+.section .names, .section .details {
+    font-size: 1.06rem;
+    color: #37506c;
+    margin-bottom: 0.2rem;
+    letter-spacing: 0.1px;
+}
+.place {
+    color: #3791c7;
+    font-weight: 500;
+}
+.map-btn, .confirm-btn {
+    display: inline-block;
+    margin-top: 0.4rem;
+    padding: 0.55em 1.2em;
+    background: linear-gradient(90deg, #3791c7 0%, #7ec6f5 100%);
+    color: #fff;
+    border-radius: 22px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px #7ec6f522;
+    transition: background 0.2s;
+    border: none;
+}
+.confirm-btn {
+    background: linear-gradient(90deg, #4ecdc4 0%, #3791c7 100%);
+    color: #fff;
+    border: none;
+    font-size: 1.15rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding: 0.8em 2.1em;
+    border-radius: 36px;
+    box-shadow: 0 3px 16px #7ec6f533;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    margin: 1.2em auto 0 auto;
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+}
+.confirm-btn i.fa-whatsapp, .confirm-btn i.fa-brands.fa-whatsapp {
+    font-size: 1.25em;
+    color: #25D366;
+    vertical-align: middle;
+    margin-right: 0.5em;
+    margin-left: -0.3em;
+}
+.confirm-btn:hover {
+    background: linear-gradient(90deg, #3791c7 0%, #4ecdc4 100%);
+    box-shadow: 0 6px 24px #7ec6f544;
+}
+.agradecimiento {
+    margin-top: 1.7rem;
+    font-size: 1.08rem;
+    color: #377ab7;
+    font-style: italic;
+    background: #e3f0ff44;
+    border-radius: 16px;
+    padding: 0.7em 1em 0.6em 1em;
+    display: inline-block;
+    box-shadow: 0 2px 8px #7ec6f522;
+}
+
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    background: linear-gradient(120deg, var(--gold) 0%, var(--rose) 100%);
+    border-radius: 28px;
+    padding: 2rem 1rem 1.5rem 1rem;
+    box-shadow: 0 4px 24px rgba(233,180,184,0.10);
+    position: relative;
+}
+
+
+.main-img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    background: var(--white);
+    transition: box-shadow 0.3s, filter 0.3s;
+    position: relative;
+}
+.icon-cross {
+    position: absolute;
+    top: 12px;
+    left: 18px;
+    font-size: 2.5rem;
+    color: var(--gold-dark);
+    background: var(--white);
+    border-radius: 50%;
+    padding: 0.4rem 0.5rem 0.3rem 0.5rem;
+    box-shadow: 0 2px 8px rgba(201,176,55,0.12);
+    z-index: 2;
+    opacity: 0.92;
+}
+.icon-angel {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 2.5rem;
+    color: var(--rose);
+    background: var(--white);
+    border-radius: 50%;
+    padding: 0.4rem 0.5rem 0.3rem 0.5rem;
+    box-shadow: 0 2px 8px rgba(232,180,184,0.12);
+    z-index: 2;
+    opacity: 0.92;
+}
+.efecto-principal {
+    border: 8px double var(--gold);
+    box-shadow: 0 8px 32px 0 rgba(87,142,126,0.22), 0 0 0 8px var(--eucalyptus);
+    animation: zoomInFade 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+    filter: brightness(0.97) contrast(1.04);
+}
+.efecto-principal:hover {
+    filter: brightness(1.08) drop-shadow(0 0 16px var(--gold));
+    box-shadow: 0 12px 48px 0 rgba(233,180,184,0.17), 0 0 0 10px var(--gold);
+}
+@keyframes zoomInFade {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(1.08);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.save-the-date {
+    font-family: var(--cursive-font);
+    font-size: 2.1rem;
+    color: var(--gold);
+    text-shadow: 0 2px 10px var(--rose), 0 1px 2px #fff;
+    letter-spacing: 2px;
+    margin-bottom: 0.2em;
+    text-align: center;
+    animation: fadeInDown 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-24px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.main-content h1 {
+    font-family: var(--cursive-font);
+    font-size: 3.2rem;
+    color: var(--gray-dark);
+    margin-bottom: 0.2em;
+    letter-spacing: 2px;
+    text-shadow:
+        0 2px 12px #fff,
+        0 0 2px #fff,
+        0 2px 24px var(--eucalyptus),
+        0 0 0.5px #fff;
+    background: none;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+    background-clip: initial;
+    padding: 0.1em 0.4em;
+    border-radius: 12px;
+}
+
+
+.main-date {
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    color: var(--white);
+    background: linear-gradient(90deg, var(--eucalyptus), var(--rose));
+    padding: 0.3em 1.2em;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    font-weight: 500;
+    box-shadow: 0 2px 12px rgba(233,180,184,0.12);
+}
+
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 2.2rem auto 2.7rem auto;
+    background: linear-gradient(90deg, #e3f0ff 0%, #b4dfff 100%);
+    border-radius: 24px;
+    box-shadow: 0 2px 18px #7ec6f533;
+    padding: 1.1rem 2.2rem;
+    max-width: 520px;
+    border: 2px solid #7ec6f5;
+}
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0.7rem;
+}
+.countdown-number {
+    font-size: 2.6rem;
+    color: #3498db;
+    font-weight: 700;
+    background: linear-gradient(120deg, #b4dfff 0%, #e3f0ff 100%);
+    border-radius: 16px;
+    box-shadow: 0 2px 10px #b4dfff22;
+    padding: 0.3em 0.8em;
+    margin-bottom: 0.2em;
+    border: 2px solid #7ec6f5;
+    min-width: 52px;
+    text-align: center;
+    transition: transform 0.18s cubic-bezier(.4,1.3,.5,1);
+}
+.pop-animate {
+    animation: popNumber 0.38s cubic-bezier(.4,1.3,.5,1);
+}
+@keyframes popNumber {
+    0% { transform: scale(1); }
+    35% { transform: scale(1.25); }
+    65% { transform: scale(0.94); }
+    100% { transform: scale(1); }
+}
+
+.countdown-label {
+    font-size: 1.1rem;
+    color: #5a9bd6;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.love-story-section h2, .family-section {
+    background: linear-gradient(120deg, var(--gold) 0%, var(--rose) 100%);
+    border-radius: 20px;
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    margin: 2rem 0 2.5rem 0;
+    box-shadow: 0 4px 24px rgba(233,180,184,0.10);
+    text-align: center;
+}
+.family-section h2 {
+    font-family: var(--cursive-font);
+    color: var(--gold-dark);
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+}
+.parents, .godparents {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-bottom: 1rem;
+}
+.parent, .godparent {
+    background: var(--white);
+    border-radius: 18px;
+    padding: 0.8rem 1.6rem;
+    box-shadow: 0 2px 8px rgba(87,142,126,0.08);
+    font-size: 1.1rem;
+    color: var(--gray-dark);
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-family: var(--primary-font);
+}
+.parent i, .godparent i {
+    color: var(--gold-dark);
+    font-size: 1.3rem;
+}
+
+.love-story-section h2, .families-section h2, .bridesmaids-section h2, .location-section h2, .program-section h2, .gallery-section h2, .gift-section h2, .videos-section h2, .messages-section h2, .confirmation-section h2, .reflections-section h2, .dedications-section h2, .dress-code-section h2, .social-section h2 {
+    font-family: var(--cursive-font);
+    color: var(--eucalyptus);
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+    letter-spacing: 2px;
+    text-align: center;
+    background: linear-gradient(90deg, var(--gold), var(--rose));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.timeline {
+    border-left: 4px dashed #7ec6f5;
+    margin-left: 1.5rem;
+    padding-left: 2rem;
+}
+.timeline-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+    position: relative;
+    margin: 2.5rem auto 2.5rem auto;
+    max-width: 540px;
+    padding-left: 0.5rem;
+}
+.timeline-item {
+    background: linear-gradient(120deg, #e3f0ff 0%, #b4dfff 100%);
+    border-radius: 22px;
+    box-shadow: 0 2px 18px #7ec6f522;
+    border: 2px solid #7ec6f5;
+    padding: 1.2rem 1.5rem 1.2rem 1.5rem;
+    margin: 0 0.7rem;
+    position: relative;
+    transition: box-shadow 0.3s;
+}
+.timeline-item:hover {
+    box-shadow: 0 6px 24px #7ec6f555;
+}
+.timeline-date {
+    color: #3498db;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    letter-spacing: 1px;
+    left: -3.7rem;
+    top: 0;
+    background: var(--gold);
+    color: var(--black);
+    font-weight: bold;
+    padding: 0.3em 1em;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px rgba(255,215,0,0.1);
+}
+.timeline-content {
+    background: var(--white);
+    border: 1.5px solid var(--rose);
+    border-radius: 18px;
+    padding: 1.2em 1.5em;
+    color: var(--gray-dark);
+    box-shadow: 0 2px 16px rgba(233,180,184,0.08);
+}
+
+.timeline-content h3 {
+    color: var(--eucalyptus);
+    font-family: var(--cursive-font);
+    font-size: 1.4rem;
+    margin-bottom: 0.4em;
+    letter-spacing: 1px;
+}
+
+.timeline-image img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 2px solid var(--eucalyptus);
+    margin-top: 0.8em;
+    background: var(--gray-light);
+}
+
+
+.music-float-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+  background: linear-gradient(135deg, var(--gold), var(--rose));
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(233,180,184,0.18);
+  width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  color: var(--white);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.music-float-btn:hover {
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+  color: var(--gold);
+  box-shadow: 0 8px 24px rgba(255,215,0,0.23);
+}
+.music-float-btn:active {
+  background: var(--gold-dark);
+}
+#music-icon {
+  pointer-events: none;
+}
+
+/* --- SECCIONES --- */
+
+.families-section, .bridesmaids-section, .location-section, .program-section, .gallery-section, .gift-section, .videos-section, .messages-section, .confirmation-section, .reflections-section, .dedications-section, .dress-code-section, .social-section {
+    background: linear-gradient(120deg, var(--gray-light) 80%, var(--rose) 100%);
+    border-radius: 22px;
+    margin: 2.5rem 0;
+    box-shadow: 0 2px 12px rgba(233,180,184,0.08);
+    padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+    border-left: 8px solid var(--eucalyptus);
+    position: relative;
+}
+
+.families-grid, .bridesmaids-grid, .gallery-grid, .gifts-grid, .videos-grid, .messages-grid, .reflections-grid, .dedications-grid, .dress-code-content, .social-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.7rem;
+    justify-content: center;
+}
+.family-card, .bridesmaid-card, .gallery-item, .gift-card, .video-card, .message-card, .reflection-card, .dedication-card, .dress-code-item, .social-item {
+    background: var(--white);
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(87,142,126,0.09);
+    border: 1.5px solid var(--eucalyptus);
+    padding: 1.2rem 1rem;
+    text-align: center;
+    min-width: 160px;
+    max-width: 250px;
+}
+.family-card img, .bridesmaid-card img, .gallery-item img, .gift-card img {
+    width: 100%;
+    max-width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid var(--rose);
+    margin-bottom: 0.8em;
+    background: var(--gray-light);
+}
+.gallery-caption {
+    font-size: 1rem;
+    color: var(--eucalyptus);
+    margin-top: 0.5em;
+    font-style: italic;
+}
+.gift-link, .social-link {
+    display: inline-block;
+    margin-top: 0.8em;
+    padding: 0.5em 1.2em;
+    background: linear-gradient(90deg, var(--gold), var(--rose));
+    color: var(--gray-dark);
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 1px 4px rgba(201,176,55,0.07);
+    transition: background 0.2s, color 0.2s;
+}
+.gift-link:hover, .social-link:hover {
+    background: linear-gradient(90deg, var(--eucalyptus), var(--gold));
+    color: var(--white);
+}
+
+.confirmation-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 320px;
+}
+.form-group label {
+    color: var(--eucalyptus);
+    font-weight: 500;
+    margin-bottom: 0.3em;
+}
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 0.7em 1em;
+    border-radius: 12px;
+    border: 1.5px solid var(--rose);
+    background: var(--gray-light);
+    font-size: 1rem;
+    margin-bottom: 0.5em;
+}
+.submit-btn {
+    background: linear-gradient(90deg, var(--gold), var(--rose));
+    color: var(--gray-dark);
+    border: none;
+    border-radius: 14px;
+    padding: 0.7em 2.2em;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(233,180,184,0.09);
+    margin-top: 1em;
+    transition: background 0.2s, color 0.2s;
+}
+.submit-btn:hover {
+    background: linear-gradient(90deg, var(--eucalyptus), var(--gold));
+    color: var(--white);
+}
+
+.dress-code-content {
+    gap: 2.2rem;
+}
+.color-palette {
+    display: flex;
+    gap: 0.7rem;
+    margin-top: 0.7em;
+    justify-content: center;
+}
+.color-box {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: 2px solid var(--gold);
+    box-shadow: 0 1px 4px rgba(201,176,55,0.07);
+}
+
+@media (max-width: 600px) {
+    .invitation-container {
+        padding: 1.1rem;
+    }
+    .main-img {
+        width: 130px;
+        height: 130px;
+    }
+    .countdown-container {
+        gap: 1.2rem;
+    }
+    .timeline-content {
+        padding: 0.8em 0.7em;
+    }
+    .families-section, .bridesmaids-section, .location-section, .program-section, .gallery-section, .gift-section, .videos-section, .messages-section, .confirmation-section, .reflections-section, .dedications-section, .dress-code-section, .social-section {
+        padding: 1.1rem 0.6rem 0.8rem 0.6rem;
+    }
+}
+
